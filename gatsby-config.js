@@ -1,16 +1,19 @@
+
 module.exports = {
-  siteMetadata: {
-    title: `Juan's Portfolio`,
-  },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-146659109-1",
+      },
+    },
     {
       resolve: `gatsby-plugin-compile-es6-packages`,
       options: {
         modules: [`query-string`]
       }
-    }
-  ],
-  plugins: [
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,4 +30,7 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: `Juan's Portfolio`,
+  }
 }

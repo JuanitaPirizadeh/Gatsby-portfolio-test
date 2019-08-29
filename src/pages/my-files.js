@@ -32,7 +32,6 @@ export default ({ data }) => {
     </Layout>
   )
 }
-
 export const query = graphql`
   query {
     allFile {
